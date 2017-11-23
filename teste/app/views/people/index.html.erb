@@ -1,0 +1,11 @@
+<h1>Pessoas#index</h1>
+<h2><%= @nome %></h2>
+<h3><%= @numeros %></h3>
+<ul>
+	<% for n in @numeros %>
+		<li><%= n %></li>
+		<%end%>
+</ul>
+
+<h4><%=nome_completo%></h4>
+<p>Find me in app/views/people/index.html.erb</p>
