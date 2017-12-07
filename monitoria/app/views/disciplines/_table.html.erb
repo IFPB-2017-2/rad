@@ -1,0 +1,21 @@
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr>
+      <th><%=v1%></th>
+      <th><%=v2%></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @disciplines.each do |discipline| %>
+      <tr>
+        <td><%= discipline.descricao %></td>
+        <td><%= discipline.abreviacao %></td>
+        <td><%= link_to 'Show', discipline %></td>
+        <td><%= link_to 'Edit', edit_discipline_path(discipline) %></td>
+        <td><%= link_to 'Destroy', discipline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

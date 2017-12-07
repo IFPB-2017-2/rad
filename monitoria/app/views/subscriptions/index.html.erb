@@ -2,14 +2,14 @@
 
 <h1>Subscriptions</h1>
 
-<table>
+<table class="table table-striped table-hover table-bordered">
   <thead>
     <tr>
       <th>Nota</th>
       <th>Cre</th>
       <th>Selecionado</th>
-      <th>Form voluntario</th>
-      <th>Form relatorio</th>
+      <!-- <th>Form voluntario</th>
+      <th>Form relatorio</th> -->
       <th>Discipline</th>
       <th>Semester</th>
       <th>Student</th>
@@ -23,11 +23,11 @@
         <td><%= subscription.nota %></td>
         <td><%= subscription.cre %></td>
         <td><%= subscription.selecionado %></td>
-        <td><%= subscription.form_voluntario %></td>
-        <td><%= subscription.form_relatorio %></td>
-        <td><%= subscription.discipline %></td>
-        <td><%= subscription.semester %></td>
-        <td><%= subscription.student %></td>
+        <!-- <td><%= subscription.form_voluntario %></td>
+        <td><%= subscription.form_relatorio %></td> -->
+        <td><%= subscription.discipline.descricao %></td>
+        <td><%= subscription.semester.ano %></td>
+        <td><%= subscription.student.nome %></td>
         <td><%= link_to 'Show', subscription %></td>
         <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
         <td><%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
