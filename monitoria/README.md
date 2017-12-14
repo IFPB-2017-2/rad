@@ -35,5 +35,12 @@ a1.save
 Student.create(nome: "Segundo console", matricula: "232323", email: "console2@ifpb")
 Student.where("nome like ?",'%console%')
 
+Subscription.where("semester_id = ?",Semester.where(ano:2017,periodo:2)[0].id).count
+ ou
+ Subscription.where("semester_id = ?",Semester.where("ano = ? and periodo = ?" , 2017, 2)[0].id).count
+ ou
+Subscription.where("semester_id = ?",Semester.find_by("ano = ? and periodo = ?" , 2017, 2).id).count
 
 ```
+
+```rails -T``` para saber as tasks
