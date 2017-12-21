@@ -1,0 +1,35 @@
+<script type="application/ld+json">
+  {
+    "@context":"http://schema.org",
+    "@type": "Product",
+    "@id":"<%=product_path%>",
+    "name":"<%=@product.nome%>",
+    "description": "<%=@product.descricao%>",
+    "image": "<%=@product.imagem%>"
+
+  }
+</script>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @product.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @product.descricao %>
+</p>
+
+<p>
+  <strong>Imagem:</strong>
+  <img src="<%= @product.imagem %>"/>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @product.valor %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
