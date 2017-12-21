@@ -44,3 +44,9 @@ Subscription.where("semester_id = ?",Semester.find_by("ano = ? and periodo = ?" 
 ```
 
 ```rails -T``` para saber as tasks
+
+
+### 21/12/2017
+* Criação de novas migrations
+* drop de colunas - O SQLite só faz o drop da coluna apagando a propria tabela e criando novamente com os dados. Se tiver restrição de chaves ele não consegui apagar a tabela.
+* relacionamento has_one

@@ -21,10 +21,18 @@
     <%= form.text_field :matricula, id: :student_matricula %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :student_email %>
-  </div>
+  <%= form.fields_for :contact do |contact_field|  %>
+    <div class="field">
+      <%= form.label :email %>
+      <%= contact_field.text_field :email, id: :student_email %>
+    </div>
+    <div class="field">
+      <%= form.label :telefone %>
+      <%= contact_field.text_field :telefone, id: :student_telefone %>
+    </div>
+  <%end%>
+
+
 
   <div class="actions">
     <%= form.submit "Salvar", class: "btn <btn-success></btn-success>"%>
