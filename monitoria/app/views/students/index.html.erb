@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Students</h1>
+<h1>Alunos</h1>
 
 <table class="table table-striped table-hover table-bordered">
   <thead>
@@ -8,6 +8,7 @@
       <th>Nome</th>
       <th>Matricula</th>
       <th>Email</th>
+      <th>Telefone</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +18,8 @@
       <tr>
         <td><%= student.nome %></td>
         <td><%= student.matricula %></td>
-        <td><%= student.email %></td>
+        <td><%= student.contact %></td>
+        <td><%= student.contact %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

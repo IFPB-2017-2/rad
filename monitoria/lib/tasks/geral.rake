@@ -27,5 +27,31 @@ namespace :geral do
     puts "[OK]"
 
   end
+  desc "Mostra uma mensagem bonitinha..."
+  task mensagem: :environment do
+    puts "Que bom!!!"
+  end
+
+  desc "Gera semestre e disciplina para teste."
+  task seedteste: :environment do
+    #4semestres
+    4.times do |i|
+      Semester.create(
+        ano: 2000 + i,
+        periodo: 1
+      )
+    end
+
+    #2 disciplinas
+    Discipline.create(
+      descricao: "Desenvolvimento RAD",
+      abreviacao: "RAD"
+    )
+    Discipline.create(
+      descricao: "Algoritimos e Programação",
+      abreviacao: "APE"
+    )
+
+  end
 
 end

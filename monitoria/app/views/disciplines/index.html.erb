@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 <%= variavel1 = "Descrição"%>
 <%= variavel2 = "Abreviação"%>
-<h1>Disciplines</h1>
+<div class="alert alert-dismissible alert-warning">
+  <h4 class="alert-heading" align="center">Disciplinas</h4>
+</div>
 
 <%= render partial: "/disciplines/table", locals:{v1:variavel1,v2:variavel2} %>
 
