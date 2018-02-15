@@ -27,16 +27,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :form_voluntario %>
-    <%= form.datetime_select :form_voluntario, id: :subscription_form_voluntario %>
-  </div>
-
-  <div class="field">
-    <%= form.label :form_relatorio %>
-    <%= form.datetime_select :form_relatorio, id: :subscription_form_relatorio %>
-  </div>
-
-  <div class="field">
     <%= form.label :discipline_id %>
     <!--<%= form.text_field :discipline_id, id: :subscription_discipline_id %> -->
 
@@ -54,6 +44,16 @@
     <%= form.label :student_id %>
     <!-- <%= form.text_field :student_id, id: :subscription_student_id %> -->
     <%= collection_select(:subscription, :student_id, @alunos, :id, :nome) %>
+  </div>
+
+  Relatórios:
+  <div id="reports">
+    <%= form.fields_for :reports do |report_fields| %>
+      <%= render partial: "report_fields", locals: {f: report_fields}  %>
+    <% end %>
+    <%= link_to_add_association("Adicionar"),f %>
+  </div>
+
   </div>
 
   <div class="actions">

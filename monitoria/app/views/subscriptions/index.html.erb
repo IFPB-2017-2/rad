@@ -13,6 +13,7 @@
       <th>Discipline</th>
       <th>Semester</th>
       <th>Student</th>
+      <th>Relatórios</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,11 +24,10 @@
         <td><%= subscription.nota %></td>
         <td><%= subscription.cre %></td>
         <td><%= subscription.selecionado %></td>
-        <!-- <td><%= subscription.form_voluntario %></td>
-        <td><%= subscription.form_relatorio %></td> -->
         <td><%= subscription.discipline.descricao %></td>
         <td><%= subscription.semester.ano %></td>
         <td><%= subscription.student.nome %></td>
+        <td><%= subscription.reports.count %></td>
         <td><%= link_to 'Show', subscription %></td>
         <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
         <td><%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>

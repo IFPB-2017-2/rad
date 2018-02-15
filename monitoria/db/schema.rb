@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221180045) do
+ActiveRecord::Schema.define(version: 20180208174349) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "email"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 20171221180045) do
     t.string "abreviacao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reports", force: :cascade do |t|
+    t.string "tipo"
+    t.datetime "data"
+    t.integer "subscription_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["subscription_id"], name: "index_reports_on_subscription_id"
   end
 
   create_table "semesters", force: :cascade do |t|
@@ -48,8 +57,6 @@ ActiveRecord::Schema.define(version: 20171221180045) do
     t.float "nota"
     t.float "cre"
     t.boolean "selecionado"
-    t.datetime "form_voluntario"
-    t.datetime "form_relatorio"
     t.integer "discipline_id"
     t.integer "semester_id"
     t.integer "student_id"

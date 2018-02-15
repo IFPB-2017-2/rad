@@ -16,28 +16,29 @@
 </p>
 
 <p>
-  <strong>Form voluntario:</strong>
-  <%= @subscription.form_voluntario %>
-</p>
-
-<p>
-  <strong>Form relatorio:</strong>
-  <%= @subscription.form_relatorio %>
-</p>
-
-<p>
   <strong>Discipline:</strong>
-  <%= @subscription.discipline %>
+  <%= @subscription.discipline.descricao %>
 </p>
 
 <p>
   <strong>Semester:</strong>
-  <%= @subscription.semester %>
+  <%= @subscription.semester.ano %>.<%= @subscription.semester.periodo %>
 </p>
 
 <p>
   <strong>Student:</strong>
-  <%= @subscription.student %>
+  <%= @subscription.student.nome %>
+</p>
+<p>
+  <strong>Quantidad de relatórios:</strong>
+  <%= @subscription.reports.count %>
+</p>
+<p>
+  <strong>Relatórios</strong>
+  <br />
+  <% for r in @subscription.reports %>
+    <%= r.tipo %><br />
+  <%end%>
 </p>
 
 <%= link_to 'Edit', edit_subscription_path(@subscription) %> |
