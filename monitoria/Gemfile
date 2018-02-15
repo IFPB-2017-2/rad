@@ -37,7 +37,8 @@ gem 'jquery-rails'
 gem 'bootstrap'
 #gem usada para formulario aninhado 1-para muitos
 gem 'cocoon'
-
+#gem para paginaçoe
+gem 'kaminari'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

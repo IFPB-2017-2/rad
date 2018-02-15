@@ -20,7 +20,7 @@
         <td><%= student.nome %></td>
         <td><%= student.matricula %></td>
         <td><%= student.contact %></td>
-        <td><%= student.contact %></td>
+        <td><%= student.contact%></td>
         <td><%= student.subscriptions.count %> </td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
@@ -29,6 +29,7 @@
     <% end %>
   </tbody>
 </table>
+<%= paginate (@students) %>
 
 <br>
 

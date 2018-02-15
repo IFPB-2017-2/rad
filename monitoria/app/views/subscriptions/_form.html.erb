@@ -48,10 +48,10 @@
 
   Relatórios:
   <div id="reports">
-    <%= form.fields_for :reports do |report_fields| %>
-      <%= render partial: "report_fields", locals: {f: report_fields}  %>
+    <%= form.fields_for :reports do |reports_fields| %>
+      <%= render partial: "report_fields", locals: {f: reports_fields}  %>
     <% end %>
-    <%= link_to_add_association("Adicionar"),f %>
+    <%= link_to_add_association("Adicionar",form, :reports) %>
   </div>
 
   </div>
